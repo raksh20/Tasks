@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 
+
+    <title>Dashboard</title> 
+    <style>
+    	ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color:#e3f2fd;
+		  text-align:right;
+		}
+
+		#heading{
+			text-align: center;
+		}
+		button {
+			  background-color: #2196F3;
+			  color: white;
+			  padding: 14px 20px;
+			  margin: 8px 0;
+			  border: none;
+			  cursor: pointer;
+			 
+
+
+			}
+    	
+    </style>
+</head> 
+<body>
+	<header>
+		<nav style="background-color: #e3f2fd;">
+  		<span id="heading">INVITATIONS</span>
+  		<ul>
+      		
+      		<form action="/logout?_method=DELETE" method="POST">
+  				<button type="submit">Log Out</button>
+			</form>
+      	</ul>
+		</nav>
+	</header>
+				
+	<div>
+    <h1>My Invitations</h1>
+  </div>
+	
+	<div>
+		<%
+	        if(invites.length!=0){
+	        var i=1;
+	        invites.forEach(function(data){
+	        %>
+		<p>Sent to: <%= data.invitee %></p>
+		<p id="event"><%= data.event %></p>
+		<p id="header"><%= data.header %></p>
+		<p id="body"><%= data.body %></p>
+		<p id="footer"><%= data.footer %></p>
+		
+		<%  i++; }) %>
+	        	<% } else{ %>
+	        		<p> No invites</p>
+	        	<% } %>
+	</div>
+
+	
+
+	
+</body>
+</html>

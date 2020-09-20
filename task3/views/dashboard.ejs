@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 
+
+    <title>Dashboard</title> 
+    <style>
+    	#logout{
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color:#e3f2fd;
+		  text-align:right;
+		}
+
+		#heading{
+			text-align: center;
+		}
+		button {
+			  background-color: #2196F3;
+			  color: white;
+			  padding: 14px 20px;
+			  margin: 8px;
+			  border: none;
+			  cursor: pointer;
+			 
+
+
+			}
+		
+    	
+    </style>
+</head> 
+<body>
+	<header>
+		<nav style="background-color: #e3f2fd;">
+  		<span id="heading">INVITATIONS</span>
+  		<div id="logout">
+      		
+      		<form action="/logout?_method=DELETE" method="POST">
+  				<button type="submit">Log Out</button>
+			</form>
+      	</div>
+		</nav>
+	</header>
+				
+	<div><a href="/create">Create Invitation</a></div>
+	<div><a href="/viewinvites">View Invites</a></div>
+	<div><a href="/myinvitations">My Invitations</a></div>
+	<div><a href="/accepted">Invites Accepted</a></div>
+
+	
+
+	
+</body>
+</html>

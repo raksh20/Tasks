@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forty Shades of Gray</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="head">
+			<div class="scores-container">
+				<div class="time">TIME 
+					<div id="timerLabel">00.00</div>
+				</div>
+				<div class="best">BEST
+					<div id="besttime">00.00</div>
+				</div>
+			</div>
+	
+
+		</div>
+		<div class="about-game">
+			<p id="info">Click the numbers as quickly as you can!</p>
+			<div id="buttons">
+			<button class="mybutton" id="startBtn" onclick="start(); makegrid();">START</button>
+			<button class="mybutton" onclick="reset(); cleargrid(); goscore();">Click here to Restart</button>
+			</div>
+		</div>
+		<div id="grid">
+			
+
+		</div>
+		<div id="message">
+		   <p id="score"></p>
+		</div>
+		
+
+		
+
+
+		<script src="script.js"></script>
+
+
+	</body>
+</html>

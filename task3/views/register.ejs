@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <title>Register</title>
+    <style>
+
+    	body{  
+		    margin: 0;  
+		    padding: 0;  
+		    font-family: 'Arial';  
+			}  
+		.login{  
+	         
+	        margin: auto;  
+	        margin: 20 0 0 450px;  
+	        padding: 40px;  
+	        border-radius: 15px ;  
+	        background-color: white;
+			border-style: inset;
+			border-width:1px;
+			border-radius: 20px;
+			box-shadow: 0 0 10px 2px;
+			width: 500px;
+			height:400px;
+          
+		}  
+		h1{
+			text-align:center;
+		}
+		button {
+			  background-color: #2196F3;
+			  color: white;
+			  padding: 14px 20px;
+			  margin: 8px 0;
+			  border: none;
+			  cursor: pointer;
+			  width: 100%;
+
+
+			}
+		input[type=text], input[type=password],input[type=email] {
+			  width: 100%;
+			  padding: 12px 20px;
+			  margin: 8px 0;
+			  display: inline-block;
+			  border: 1px solid #ccc;
+			  box-sizing: border-box;
+			}
+    </style> 
+</head> 
+<body> 
+	<div class="container col-sm-12">
+		 <div style=" margin-top:50px" class="mainbox col-md-6 offset-md-3 col-sm-8 col-sm-offset-2">
+		 	<div class="panel panel-info">
+		 		<div class="panel-heading">
+		 			<div class="panel-title"><h1>Register</h1></div>	
+		 		</div>
+				 	<div class="login" >
+						<form  class="form-horizontal" action="/register" method="POST">
+							
+								<div class="form-group">
+									<label for="name" class="col-md-3 control-label">Name</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" id="name" name="name" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="username" class="col-md-3 control-label">Username</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" id="username" name="username" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email" class="col-md-3 control-label">Email</label>
+									<div class="col-md-9">
+										<input type="email" class="form-control" id="email" name="email" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-md-3 control-label">Password</label>
+									<div class="col-md-9">
+										<input type="password" class="form-control" id="password" name="password"   required>
+									</div>	
+								</div>
+								
+								<button type="submit" class="btn btn-primary">Register</button>
+							
+						</form>
+						<div class="col-md-offset-3 col-md-9">
+								<a href="/login">Login</a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+</body>
+</html>

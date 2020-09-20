@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 
+
+    <title>Dashboard</title> 
+    <style>
+    	ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color:#e3f2fd;
+		  text-align:right;
+		}
+
+		#heading{
+			text-align: center;
+		}
+		button {
+			  background-color: #2196F3;
+			  color: white;
+			  padding: 14px 20px;
+			  margin: 8px 0;
+			  border: none;
+			  cursor: pointer;
+			 
+
+
+			}
+    	
+    </style>
+</head> 
+<body>
+	<header>
+		<nav style="background-color: #e3f2fd;">
+  		<span id="heading">INVITATIONS</span>
+  		<ul>
+      		
+      		<form action="/logout?_method=DELETE" method="POST">
+  				<button type="submit">Log Out</button>
+			</form>
+      	</ul>
+		</nav>
+	</header>
+				
+	<div>
+    <h1>Create Event and Invitations</h1>
+  </div>
+	
+	<div>
+		
+		<form action="/create" method="POST">
+			   <label for="eventname">Event Name:</label>
+  			<input type="text" id="eventname" name="eventname" required><br>
+  			<label for="date">Date:</label>
+  			<input type="date" id="date" name="date" required><br>
+  			<label for="header">Header:</label>
+  			<input type="text" id="header" name="header" required><br>
+  			<label for="body">Body:</label>
+  			<input type="text" id="body" name="body" required><br>
+  			<label for="footer">Footer:</label>
+  			<input type="text" id="footer" name="footer" required><br>
+  			<label for="invitee">Name of the Invitee:</label>
+  			<input type="text" id="invitee" name="invitee" required><br>
+  			
+  			<button type="submit" class="btn btn-primary">Invite</button>
+		</form>
+	</div>
+
+	
+
+	
+</body>
+</html>
