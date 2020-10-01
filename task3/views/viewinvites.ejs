@@ -69,12 +69,13 @@
     <h1>Invites</h1>
   </div>
 	
-	<div class="card">
+	
 		<%
 	        if(invites.length!=0){
 	        var i=1;
 	        invites.forEach(function(data){
 	        %>
+	     <div class="card">
 		<p>Sent by: <%= data.invite_by %></p>
 		<p id="event"><%= data.event %></p>
 		<p id="header"><%= data.header %></p>
@@ -91,12 +92,12 @@
 			</div>
 			<input type="submit" value="Submit">
 		</form>
-
+	</div><br>
 		<%  i++; }) %>
 					        	<% } else{ %>
 					        		<p> No invites</p>
 					        	<% } %>
-	</div>
+	
 
 	
 
