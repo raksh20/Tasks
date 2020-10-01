@@ -9,6 +9,7 @@
 
     <title>Dashboard</title> 
     <style>
+    	
     	#logout{
 		  list-style-type: none;
 		  margin: 0;
@@ -32,7 +33,21 @@
 
 
 			}
-		
+		a:link, a:visited {
+						  background-color: #2196F3;
+						  color: white;
+						  padding: 14px 25px;
+						  text-align: center;
+						  text-decoration: none;
+						  display: inline-block;
+						}
+			a:hover, a:active {
+						  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+						}
+		.links{
+				
+  				text-align: center;
+		}
     	
     </style>
 </head> 
@@ -48,13 +63,13 @@
       	</div>
 		</nav>
 	</header>
-				
-	<div><a href="/create">Create Invitation</a></div>
-	<div><a href="/viewinvites">View Invites</a></div>
-	<div><a href="/myinvitations">My Invitations</a></div>
+		<div class="links">		
+	<div><a href="/create">Create Invitation</a></div><br>
+	<div><a href="/viewinvites">View Invites</a></div><br>
+	<div><a href="/myinvitations">My Invitations</a></div><br>
 	<div><a href="/accepted">Invites Accepted</a></div>
 
-	
+	</div>
 
 	
 </body>

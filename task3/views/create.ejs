@@ -7,7 +7,7 @@
 
  
 
-    <title>Dashboard</title> 
+    <title>Create</title> 
     <style>
     	ul {
 		  list-style-type: none;
@@ -32,6 +32,33 @@
 
 
 			}
+		.head{
+			text-align: center;
+		}
+		.create{
+			margin: auto;  
+	        margin: 20 0 0 450px;  
+	        padding: 40px;  
+	        border-radius: 15px ;  
+	        background-color: white;
+			border-style: inset;
+			border-width:1px;
+			border-radius: 20px;
+			box-shadow: 0 0 10px 2px;
+			width: 500px;
+			height:520px;
+		}
+		input[type=text], input[type=date] {
+			  width: 100%;
+			  padding: 12px 20px;
+			  margin: 8px 0;
+			  display: inline-block;
+			  border: 1px solid #ccc;
+			  box-sizing: border-box;
+			}
+		.inviteBtn{
+			width:100%;
+		}
     	
     </style>
 </head> 
@@ -48,11 +75,11 @@
 		</nav>
 	</header>
 				
-	<div>
+	<div class="head">
     <h1>Create Event and Invitations</h1>
   </div>
 	
-	<div>
+	<div class="create">
 		
 		<form action="/create" method="POST">
 			   <label for="eventname">Event Name:</label>
@@ -68,7 +95,7 @@
   			<label for="invitee">Name of the Invitee:</label>
   			<input type="text" id="invitee" name="invitee" required><br>
   			
-  			<button type="submit" class="btn btn-primary">Invite</button>
+  			<button type="submit" class="inviteBtn">Invite</button>
 		</form>
 	</div>
 

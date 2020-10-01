@@ -218,6 +218,27 @@ app.post('/acc_rej', checkAuthenticated,  (req,res)=>{
 
 });
 
+app.get('/card/:id', (req, res,next) => {
+	var cardId=req.params.id;
+	var arr=[];
+	var values=[
+     [cardId]  
+    ];
+	var sql='SELECT * FROM invites WHERE id =? ' ;
+	 mysqlConnection.query(sql, [values], function (err, data, fields) {
+    	if (err) throw err;
+    	
+      
+     if(data.length>0){
+     	res.render('card',{invites:data})
+     }else{
+     	res.render('card',{invites:arr})
+     }
+
+
+
+	});
+});
 
 app.listen(3000, ()=>console.log("Listening on port 3000"));
 

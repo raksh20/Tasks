@@ -7,7 +7,7 @@
 
  
 
-    <title>My Invitations</title> 
+    <title>Invites</title> 
     <style>
     	ul {
 		  list-style-type: none;
@@ -32,37 +32,39 @@
 
 
 			}
-		.head{
-			text-align: center;
-		}
-		.card{
-			 margin: auto;  
+
+		.card {
+				 margin: auto;  
 	        margin: 20 0 0 450px;  
-	        padding: 40px;  
+	        padding: 30px;  
 	        border-radius: 15px ;  
-	        background-color: white;
+	        background-image:url("https://www.fotojet.com/application/common/pattern/thumbnail/pattern-line-01.svg");
 			border-style: inset;
 			border-width:1px;
 			border-radius: 20px;
 			box-shadow: 0 0 10px 2px;
 			width: 500px;
 			height:300px;
+				}
+			.head{
+				text-align: center;
+			}
+		.border{
+			border-style: double;
+			padding: 10px;
+			margin:5px;
+			height:270px;
+			border-color: white;
 		}
-		.links{
-			text-align: center;
-		}
-		a:link, a:visited {
-						  background-color: #2196F3;
-						  color: white;
-						  padding: 14px 25px;
-						  text-align: center;
-						  text-decoration: none;
-						  display: inline-block;
-						}
-			a:hover, a:active {
-						  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-						}
-    	
+    	#header{
+    		text-align: center;
+    	}
+    	#body{
+    		text-align: center;
+    	}
+    	#footer{
+    		text-align: center;
+    	}
     </style>
 </head> 
 <body>
@@ -79,23 +81,28 @@
 	</header>
 				
 	<div class="head">
-    <h1>My Invitations</h1>
+    <h1>Invites</h1>
   </div>
 	
-	<div>
+	<div class="card">
+		<div class="border">
 		<%
 	        if(invites.length!=0){
 	        var i=1;
 	        invites.forEach(function(data){
 	        %>
-		<div class="links">	
-		<div><a href="/card/<%= data.id %>" id="eventname"><%= data.eventname %></a></div><br>
-		</div>
 		
+		<p id="event"><%= data.event %></p>
+		<h1 id="header"><%= data.header %></h1>
+		<p id="body"><%= data.body %></p>
+		<p id="footer"><%= data.footer %></p>
+		
+
 		<%  i++; }) %>
-	        	<% } else{ %>
-	        		<p> No invitations created</p>
-	        	<% } %>
+					        	<% } else{ %>
+					        		<p> No invites</p>
+					        	<% } %>
+		</div>
 	</div>
 
 	

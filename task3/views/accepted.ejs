@@ -7,7 +7,7 @@
 
  
 
-    <title>Dashboard</title> 
+    <title>Accepted</title> 
     <style>
     	ul {
 		  list-style-type: none;
@@ -32,6 +32,22 @@
 
 
 			}
+		.card{
+			 margin: auto;  
+	        margin: 20 0 0 450px;  
+	        padding: 40px;  
+	        border-radius: 15px ;  
+	        background-color: white;
+			border-style: inset;
+			border-width:1px;
+			border-radius: 20px;
+			box-shadow: 0 0 10px 2px;
+			width: 500px;
+			height:300px;
+		}
+		.head{
+			text-align: center;
+		}
     	
     </style>
 </head> 
@@ -48,11 +64,11 @@
 		</nav>
 	</header>
 				
-	<div>
+	<div class='head'>
     <h1>Invites Accepted</h1>
   </div>
 	
-	<div>
+	<div class="card">
 		<%
 	        if(invites.length!=0){
 	        var i=1;
